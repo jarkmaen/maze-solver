@@ -6,7 +6,7 @@ A Java application for generating and solving mazes using classic pathfinding al
 
 A runnable .jar file can be downloaded from the [releases](https://github.com/jarkmaen/maze-solver/releases/tag/v1.0.0) page.
 
-![Maze solver demo](documentation/images/maze_solver_demo.gif)
+<img src="documentation/images/maze_solver_demo.gif">
 
 ## Documentation
 
@@ -20,7 +20,7 @@ A runnable .jar file can be downloaded from the [releases](https://github.com/ja
 
 ## Command line operations
 
-To run the commands below, you'll need to have both [Java Development Kit (JDK)](https://www.oracle.com/java/) and [Maven](https://maven.apache.org/) installed on your computer. Run all commands from the root directory of the project (the folder containing the pom.xml file).
+To run the following commands below, you'll need to have both [Java Development Kit (JDK)](https://www.oracle.com/java/) and [Maven](https://maven.apache.org/) installed on your computer. Run all commands from the root directory of the project (the folder containing the pom.xml file).
 
 ### Running the application
 
@@ -54,24 +54,24 @@ To generate a test coverage report, use the command:
 mvn jacoco:report
 ```
 
-The report's output can be found in the target/site/jacoco/ directory under the name index.html.
+The output can be found in the target/site/jacoco/ directory under the name index.html.
 
 ### JavaDoc
 
-To generate the JavaDoc documentation, use the command:
+To generate JavaDoc documentation, use the command:
 
 ```
 mvn javadoc:javadoc
 ```
 
-The report's output can be found in the target/reports/apidocs/ directory under the name index.html.
+The output can be found in the target/reports/apidocs/ directory under the name index.html.
 
 ### Checkstyle
 
-To perform the Checkstyle check, use the command:
+To perform a Checkstyle check, use the command:
 
 ```
 mvn jxr:jxr checkstyle:checkstyle
 ```
 
-The report's output can be found in the target/site/ directory under the name checkstyle.html.
+The output can be found in the target/site/ directory under the name checkstyle.html.

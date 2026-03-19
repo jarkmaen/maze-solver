@@ -5,7 +5,7 @@
 The project is divided into three main packages:
 
 - `mazesolver.ui`: Contains the user interface classes.
-- `mazesolver.logic`: Contains the application logic and algorithms
+- `mazesolver.logic`: Contains the application logic and algorithms.
 - `mazesolver.util`: Contains the necessary data structures and other utilities.
 
 ### UI
@@ -14,9 +14,9 @@ The project is divided into three main packages:
 
 ### Logic
 
-- `Maze`: Generates and manages the maze. Random maze generation is done using a DFS algorithm.
-- `WallFollower`: Solves the maze using the wall follower algorithm. Stores the solving path for animation in the UI.
-- `DeadEndFilling`: Solves the maze using the dead-end filling algorithm. Stores the solving path for animation in the UI.
+- `Maze`: Generates and manages the maze. Random maze generation is done using DFS.
+- `WallFollower`: Solves the maze using the wall follower algorithm. Stores the solution path for visualization.
+- `DeadEndFilling`: Solves the maze using the dead-end filling algorithm. Stores the solution path for visualization.
 
 ### Util
 
@@ -31,18 +31,18 @@ All data structures in this package are implemented from scratch for educational
 
 ## Time and space complexities
 
-The application generates mazes using an iterative DFS algorithm and solves them with the wall follower and dead-end filling algorithms. Both solving algorithms are ideal choices for this project because each generated maze has only one valid solution. All mazes are square, with dimensions n x n.
+The application generates mazes using a DFS algorithm. These mazes can then be solved using either the wall follower or the dead-end filling algorithm. Both solving algorithms are ideal choices for this project because each generated maze has only one valid solution. All mazes are square, with dimensions n x n.
 
 - Maze generation (DFS):
-  - Time complexity: O(n²), where n is the width and height of the maze. Each cell is visited once.
-  - Space complexity: O(n²), due to the grid and the stack used for iteration.
+    - Time complexity: O(n²), where n is the width and height of the maze. Each cell is visited.
+    - Space complexity: O(n²), due to needing a stack for backtracking and storing the state of each cell.
 
 - Wall follower algorithm:
-  - Time complexity: O(n²) in the worst case, as it may traverse the entire maze before reaching the exit.
-  - Space complexity: O(1), since it only needs to track the current position and direction.
+    - Time complexity: O(n²) in the worst case, as it may traverse the entire maze before reaching the exit.
+    - Space complexity: O(1), since it only needs to track the current position and direction.
 
 - Dead-end filling algorithm:
-  - Time complexity: O(n²), as it iteratively fills dead ends until only the solution remains.
-  - Space complexity: O(n²), since it must remember the location of every dead end and track visited cells.
+    - Time complexity: O(n²), as it iteratively fills dead ends until only the solution remains.
+    - Space complexity: O(n²), since it must remember the location of every dead end and track visited cells.
 
-Note: Storing the full solution path for animation/visualization purposes increases the space complexity for both solving algorithms to O(n²), but this is only required for UI features and does not affect the theoretical complexity of the algorithms themselves.
+Note: While the wall follower algorithm theoretically requires only O(1) space, storing the solution path for visualization increases the implementation's space complexity to O(n²).
